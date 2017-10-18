@@ -33,7 +33,7 @@ public class Team
         assert currentSeason != null;
     }
 
-    public Team (String name, Season season)
+    public Team (String name, Season currentSeason)
     {
         this.players = new ArrayList<>();
         this.coaches = new ArrayList<>();
