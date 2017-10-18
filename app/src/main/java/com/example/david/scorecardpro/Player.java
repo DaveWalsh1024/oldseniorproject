@@ -19,7 +19,7 @@ public class Player
         return lName;
     }
 
-    public String getPosition ()
+    public int getPosition ()
     {
         return position;
     }
@@ -37,7 +37,7 @@ public class Player
         assert age > -1;
     }
 
-    public Player(String fName, String lName, String position, int number, int age)
+    public Player(String fName, String lName, int position, int number, int age)
     {
         this.fName = fName;
         this.lName = lName;
@@ -49,7 +49,7 @@ public class Player
 
     private String fName;
     private String lName;
-    private String position;
+    private int position;
     private int number;
     private int age;
 

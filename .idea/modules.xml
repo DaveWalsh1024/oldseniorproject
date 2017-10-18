@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ScorecardPro.iml" filepath="$PROJECT_DIR$/ScorecardPro.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seniorproject.iml" filepath="$PROJECT_DIR$/seniorproject.iml" />
     </modules>
   </component>
 </project>
