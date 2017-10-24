@@ -6,39 +6,34 @@ import java.text.FieldPosition;
  * Created by david on 10/3/2017.
  */
 
-public class Player
-{
+public class Player {
 
-    public String getFName()
-    {
+    public String getFName() {
         return fName;
     }
 
-    public String getLName ()
-    {
+    public String getLName() {
         return lName;
     }
 
-    public int getPosition ()
-    {
+    public int getPosition() {
         return position;
     }
 
-    public int getNumber ()
-    {
+    public int getNumber() {
         return number;
     }
 
-    public int getAge () { return age; }
+    public int getAge() {
+        return age;
+    }
 
-    public void repOk()
-    {
+    public void repOk() {
         assert number > -1;
         assert age > -1;
     }
 
-    public Player(String fName, String lName, int position, int number, int age)
-    {
+    public Player(String fName, String lName, int position, int number, int age) {
         this.fName = fName;
         this.lName = lName;
         this.position = position;
