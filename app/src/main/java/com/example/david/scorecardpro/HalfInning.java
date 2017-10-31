@@ -28,6 +28,7 @@ public class HalfInning
         outs++;
 
         //This is the 3rd out so do some inning stuff
+        //
         else
         {
             //If it is the top of the inning
