@@ -6,36 +6,34 @@ import java.util.Date;
  * Created by david on 10/3/2017.
  */
 
-public class Game
-{
-    public Team getHomeTeam()
-    {
+public class Game {
+
+    public Team getHomeTeam() {
         return homeTeam;
     }
 
-    public Team getAwayTeam ()
-    {
+    public Team getAwayTeam() {
         return awayTeam;
     }
 
-    public Date getGameDate ()
-    {
+    public Date getGameDate() {
         return gameDate;
     }
 
-    public String getLocation ()
-    {
+    public String getLocation() {
         return location;
     }
 
-    public int getHomeTeamScore () { return homeTeamScore; }
+    public int getHomeTeamScore() {
+        return homeTeamScore;
+    }
 
-    public int getAwayTeamScore () { return awayTeamScore; }
+    public int getAwayTeamScore() {
+        return awayTeamScore;
+    }
 
-    public Team getGameWinner ()
-    {
-        if (homeTeamScore > awayTeamScore)
-        {
+    public Team getGameWinner() {
+        if (homeTeamScore > awayTeamScore) {
             return homeTeam;
         }
         else
@@ -43,16 +41,14 @@ public class Game
     }
 
 
-    public void repOk()
-    {
+    public void repOk() {
         assert homeTeam != null;
         assert awayTeam != null;
         assert homeTeamScore > -1;
         assert awayTeamScore > -1;
     }
 
-    public Game(Team homeTeam, Team awayTeam, Date gameDate, String location, int homeTeamScore, int awayTeamScore, Team gameWinner)
-    {
+    public Game(Team homeTeam, Team awayTeam, Date gameDate, String location, int homeTeamScore, int awayTeamScore, Team gameWinner) {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
         this.gameDate = gameDate;
