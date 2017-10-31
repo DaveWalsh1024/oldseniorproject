@@ -25,6 +25,18 @@ public class Team
 
     public Season getCurrentSeason () {return currentSeason; }
 
+    public void addPlayerToTeam (Team team, Player player)
+    {
+        team.players.add(player);
+        repOk();
+    }
+
+    public void removePlayerFromTeam (Team team, Player player)
+    {
+        team.players.remove(player);
+        repOk();
+    }
+
     public void repOk()
     {
         assert players != null;

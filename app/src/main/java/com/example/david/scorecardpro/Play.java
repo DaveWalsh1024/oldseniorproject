@@ -7,7 +7,9 @@ package com.example.david.scorecardpro;
 public class Play
 {
     public Player getBatter () { return batter; }
+
     public Player getPitcher () { return  pitcher; }
+
     public Pitch getPlayPitch () { return playPitch; }
 
     public Play(Player batter, Player pitcher, Pitch playPitch)

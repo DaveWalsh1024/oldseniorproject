@@ -31,10 +31,41 @@ public class Player
 
     public int getAge () { return age; }
 
+    public void updateFName (String newfName)
+    {
+        fName = newfName;
+        repOk();
+    }
+
+    public void updateLName (String newlName)
+    {
+        lName = newlName;
+        repOk();
+    }
+
+    public void updatePosition (int newPosition)
+    {
+        position = newPosition;
+        repOk();
+    }
+
+    public void updateAge (int newAge)
+    {
+        age = newAge;
+        repOk();
+    }
+
+    public void updateNumber (Player player, int age)
+    {
+        player.number = number;
+        repOk();
+    }
+
     public void repOk()
     {
-        assert number > -1;
-        assert age > -1;
+        assert number > -1 && number < 100;
+        assert age > -1 && age < 120;
+        assert position > 0 && position < 10;
     }
 
     public Player(String fName, String lName, int position, int number, int age)

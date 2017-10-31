@@ -11,8 +11,24 @@ public class AtBat
     public int getStrikeCount () { return strikeCount; }
     public int getBallCount () { return ballCount; }
 
-    public AtBat (int strikeCount, int ballCount)
+    public void incrementStrikes ()
     {
+        // If strike count is less than 3 add 1 to count
+        if (strikeCount < 3)
+            //Increment strikes by 1
+            strikeCount++;
+
+        // If strike count is already 2 then another strike is an out
+        else
+        {
+            halfInning.incrementOuts();
+        }
+    }
+
+    public AtBat (Player hitter, HalfInning halfInning, int strikeCount, int ballCount)
+    {
+        this.hitter = hitter;
+        this.halfInning = halfInning;
         this.strikeCount = strikeCount;
         this.ballCount = ballCount;
         this.pitches = new ArrayList<>();
@@ -21,10 +37,13 @@ public class AtBat
 
     public void repOk()
     {
+        assert hitter != null;
         assert strikeCount > -1 && strikeCount < 4;
         assert ballCount > -1 && ballCount <  5;
     }
 
+    Player hitter;
+    HalfInning halfInning;
     private int strikeCount;
     private int ballCount;
     private ArrayList <Pitch> pitches;
