@@ -25,15 +25,21 @@ public class Team
 
     public Season getCurrentSeason () {return currentSeason; }
 
-    public void addPlayerToTeam (Team team, Player player)
+    public void addPlayerToTeam (Player player)
     {
-        team.players.add(player);
+        players.add(player);
         repOk();
     }
 
-    public void removePlayerFromTeam (Team team, Player player)
+    public void removePlayerFromTeam (Player player)
     {
-        team.players.remove(player);
+        players.remove(player);
+        repOk();
+    }
+
+    public void updateTeamName (String newTeamName)
+    {
+        name = newTeamName;
         repOk();
     }
 

@@ -16,12 +16,6 @@ public class Main {
         Season season1 = new Season(0, 0);
 
         Team goodGuys = new Team("Red Sox", season1);
-
-        goodGuys.addPlayer(jack);
-        goodGuys.addPlayer(david);
-        goodGuys.addPlayer(joe);
-
-        goodGuys.addCoach(craig);
     }
 
 }

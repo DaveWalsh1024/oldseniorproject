@@ -13,6 +13,7 @@ public class HalfInning
     public int getRunsScored () { return runsScored; }
     public int getOuts () { return outs; }
     public int getTopOrBottom () { return  topOrBottom; }
+    public Field getField () { return field; }
     public Inning getInning () { return inning; }
 
     public void setTopOrBottom (int halfInningNumber)
@@ -48,7 +49,8 @@ public class HalfInning
         }
     }
 
-    public HalfInning (int outs, Team battingTeam, Team pitchingTeam, int runsScored, int topOrBottom, Inning inning)
+
+    public HalfInning (int outs, Team battingTeam, Team pitchingTeam, int runsScored, int topOrBottom, Inning inning, Field field)
     {
         this.batters = new ArrayList<>();
         this.outs = outs;
@@ -57,6 +59,7 @@ public class HalfInning
         this.runsScored = runsScored;
         this.topOrBottom = topOrBottom;
         this.inning = inning;
+        this.field = field;
         repOk();
     }
 
@@ -75,4 +78,5 @@ public class HalfInning
     private int runsScored;
     private int topOrBottom; //1 for top of inning, 2 for bottom of inning
     private Inning inning;
+    private Field field;
 }

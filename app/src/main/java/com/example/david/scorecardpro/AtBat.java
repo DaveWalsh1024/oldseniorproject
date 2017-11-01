@@ -10,6 +10,7 @@ public class AtBat
 {
     public int getStrikeCount () { return strikeCount; }
     public int getBallCount () { return ballCount; }
+    public Field getField () { return field; }
 
     public void incrementStrikes ()
     {
@@ -25,13 +26,23 @@ public class AtBat
         }
     }
 
-    public AtBat (Player hitter, HalfInning halfInning, int strikeCount, int ballCount)
+    public void incrementBalls()
+    {
+        if (ballCount < 4)
+            ballCount++;
+
+        else
+            field.advanceRunners(1, hitter);
+    }
+
+    public AtBat (Player hitter, HalfInning halfInning, int strikeCount, int ballCount, Field field)
     {
         this.hitter = hitter;
         this.halfInning = halfInning;
         this.strikeCount = strikeCount;
         this.ballCount = ballCount;
         this.pitches = new ArrayList<>();
+        this.field = field;
         repOk();
     }
 
@@ -47,4 +58,5 @@ public class AtBat
     private int strikeCount;
     private int ballCount;
     private ArrayList <Pitch> pitches;
+    Field field;
 }
