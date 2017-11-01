@@ -7,10 +7,7 @@ package com.example.david.scorecardpro;
 public class Base
 {
     public int getBaseNumber () { return baseNumber; }
-    public Player getRunnerOnBase ()
-    {
-        return runnerOnBase;
-    }
+    public Player getRunnerOnBase () { return runnerOnBase; }
 
     public void setRunnerOnBase (Player player)
     {

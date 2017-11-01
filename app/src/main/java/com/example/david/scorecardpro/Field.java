@@ -61,7 +61,7 @@ public class Field
         }
     }
 
-    public void advanceRunners (int baseHitterWentTo, Player newBaseRunner)
+    public void forcedBase (Player newBaseRunner)
     {
         boolean firstBaseHasRunner = false;
         boolean secondBaseHasRunner = false;
@@ -84,18 +84,65 @@ public class Field
 
         if (firstBaseHasRunner == false && secondBaseHasRunner == false && thirdBaseHasRunner == false)
         {
-            for (int i = 1; i < baseHitterWentTo + 1; i++)
-            {
-                if (baseHitterWentTo == 1)
-                {
-                     firstBase.setRunnerOnBase(newBaseRunner);
-                }
-            }
+            firstBase.setRunnerOnBase(newBaseRunner);
+        }
+
+        if (firstBaseHasRunner == true && secondBaseHasRunner == false && thirdBaseHasRunner == false)
+        {
+            secondBase.setRunnerOnBase(firstBase.getRunnerOnBase());
+            firstBase.removeRunnerOnBase();
+            firstBase.setRunnerOnBase(newBaseRunner);
+        }
+
+        if (firstBaseHasRunner == true && secondBaseHasRunner == true && thirdBaseHasRunner == false)
+        {
+            thirdBase.setRunnerOnBase(secondBase.getRunnerOnBase());
+            secondBase.removeRunnerOnBase();
+            secondBase.setRunnerOnBase(firstBase.getRunnerOnBase());
+            firstBase.removeRunnerOnBase();
+            firstBase.setRunnerOnBase(newBaseRunner);
+        }
+
+        if (firstBaseHasRunner == true && secondBaseHasRunner == true && thirdBaseHasRunner == true)
+        {
+            halfInning.incrementRunsScored();
+            thirdBase.removeRunnerOnBase();
+            thirdBase.setRunnerOnBase(secondBase.getRunnerOnBase());
+            secondBase.removeRunnerOnBase();
+            secondBase.setRunnerOnBase(firstBase.getRunnerOnBase());
+            firstBase.removeRunnerOnBase();
+            firstBase.setRunnerOnBase(newBaseRunner);
         }
     }
 
-    public Field (Base firstBase, Base secondBase, Base thirdBase, Base homeBase)
+    public void extraBase(int basesAdvanced, Base basePlayerStartedOn, Player newBaseRunner)
     {
+        int newBaseNumber = basePlayerStartedOn.getBaseNumber() + basesAdvanced;
+
+        if (newBaseNumber == 1)
+        {
+            firstBase.setRunnerOnBase(newBaseRunner);
+        }
+
+        else if (newBaseNumber == 2)
+        {
+            secondBase.setRunnerOnBase(newBaseRunner);
+        }
+
+        else if (newBaseNumber == 3)
+        {
+            thirdBase.setRunnerOnBase(newBaseRunner);
+        }
+
+        else
+            halfInning.incrementRunsScored();
+    }
+
+    public Field (Base firstBase, Base secondBase, Base thirdBase, Base homeBase, HalfInning halfInning, Team battingTeam, Team fieldingTeam)
+    {
+        this.battingTeam = battingTeam;
+        this.fieldingTeam = fieldingTeam;
+        this.halfInning = halfInning;
         this.firstBase = firstBase;
         this.secondBase = secondBase;;
         this.thirdBase = thirdBase;
@@ -109,8 +156,13 @@ public class Field
         assert secondBase != null;
         assert thirdBase != null;
         assert homeBase != null;
+        assert battingTeam != null;
+        assert fieldingTeam != null;
     }
 
+    private HalfInning halfInning;
+    private Team battingTeam;
+    private Team fieldingTeam;
     private Base firstBase;
     private Base secondBase;
     private Base thirdBase;

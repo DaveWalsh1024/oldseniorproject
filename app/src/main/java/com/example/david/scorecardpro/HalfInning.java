@@ -49,6 +49,12 @@ public class HalfInning
         }
     }
 
+    public void incrementRunsScored ()
+    {
+        runsScored++;
+        repOk();
+    }
+
 
     public HalfInning (int outs, Team battingTeam, Team pitchingTeam, int runsScored, int topOrBottom, Inning inning, Field field)
     {

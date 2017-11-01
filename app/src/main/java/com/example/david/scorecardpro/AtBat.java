@@ -32,7 +32,8 @@ public class AtBat
             ballCount++;
 
         else
-            field.advanceRunners(1, hitter);
+            return;
+        //call the advanced runner method that we need to write
     }
 
     public AtBat (Player hitter, HalfInning halfInning, int strikeCount, int ballCount, Field field)
