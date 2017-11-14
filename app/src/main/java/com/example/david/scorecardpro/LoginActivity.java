@@ -61,6 +61,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+    private Button mSignInButton;
+    private Button mRegisterButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +94,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+        mSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        mRegisterButton = (Button) findViewById(R.id.email_register_button);
+
     }
 
     private void populateAutoComplete() {
