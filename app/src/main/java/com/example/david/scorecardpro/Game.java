@@ -1,5 +1,6 @@
 package com.example.david.scorecardpro;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -32,12 +33,24 @@ public class Game {
         return awayTeamScore;
     }
 
-    public Team getGameWinner() {
-        if (homeTeamScore > awayTeamScore) {
+    public Team getGameWinner()
+    {
+        if (homeTeamScore > awayTeamScore)
+        {
             return homeTeam;
         }
         else
             return awayTeam;
+    }
+
+    public Team getGameLooser ()
+    {
+        if (awayTeamScore > homeTeamScore )
+        {
+            return awayTeam;
+        }
+        else
+            return homeTeam;
     }
 
 
@@ -46,16 +59,18 @@ public class Game {
         assert awayTeam != null;
         assert homeTeamScore > -1;
         assert awayTeamScore > -1;
+        assert innings != null;
     }
 
-    public Game(Team homeTeam, Team awayTeam, Date gameDate, String location, int homeTeamScore, int awayTeamScore, Team gameWinner) {
+    public Game(Team homeTeam, Team awayTeam, Date gameDate, String location, int homeTeamScore, int awayTeamScore)
+    {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
         this.gameDate = gameDate;
         this.location = location;
         this.homeTeamScore = homeTeamScore;
         this.awayTeamScore = awayTeamScore;
-        this.gameWinner = gameWinner;
+        this.innings = new ArrayList<>();
         repOk();
     }
 
@@ -65,5 +80,5 @@ public class Game {
     private Team awayTeam;
     private Date gameDate;
     private String location;
-    private Team gameWinner;
+    private ArrayList <Inning> innings;
 }

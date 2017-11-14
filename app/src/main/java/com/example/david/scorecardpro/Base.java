@@ -9,6 +9,18 @@ public class Base
     public int getBaseNumber () { return baseNumber; }
     public Player getRunnerOnBase () { return runnerOnBase; }
 
+    public boolean doesBaseHaveRunner ()
+    {
+        if (getRunnerOnBase() == null)
+        {
+            return false;
+        }
+
+        else
+            return false;
+    }
+
+
     public void setRunnerOnBase (Player player)
     {
         runnerOnBase = player;

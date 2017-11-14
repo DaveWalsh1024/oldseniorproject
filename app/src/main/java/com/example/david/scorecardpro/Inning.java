@@ -22,6 +22,7 @@ public class Inning
 
 
 
+
     public Inning (int inningCount, HalfInning topInning, HalfInning bottomInning)
     {
         this.inningCount = inningCount;

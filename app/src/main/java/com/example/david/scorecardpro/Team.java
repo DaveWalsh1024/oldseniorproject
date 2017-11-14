@@ -49,6 +49,7 @@ public class Team
         assert coaches != null;
         assert name != null;
         assert currentSeason != null;
+        assert disabledPlayerList != null;
     }
 
     public Team (String name, Season currentSeason)

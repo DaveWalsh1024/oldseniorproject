@@ -10,16 +10,13 @@ public class AtBat
 {
     public int getStrikeCount () { return strikeCount; }
     public int getBallCount () { return ballCount; }
-    public Field getField () { return field; }
+    public BasePath getField () { return basePath; }
 
     public void incrementStrikes ()
     {
-        // If strike count is less than 3 add 1 to count
         if (strikeCount < 3)
-            //Increment strikes by 1
             strikeCount++;
 
-        // If strike count is already 2 then another strike is an out
         else
         {
             halfInning.incrementOuts();
@@ -36,14 +33,14 @@ public class AtBat
         //call the advanced runner method that we need to write
     }
 
-    public AtBat (Player hitter, HalfInning halfInning, int strikeCount, int ballCount, Field field)
+    public AtBat (Player hitter, HalfInning halfInning, int strikeCount, int ballCount, BasePath basePath)
     {
         this.hitter = hitter;
         this.halfInning = halfInning;
         this.strikeCount = strikeCount;
         this.ballCount = ballCount;
         this.pitches = new ArrayList<>();
-        this.field = field;
+        this.basePath = basePath;
         repOk();
     }
 
@@ -59,5 +56,5 @@ public class AtBat
     private int strikeCount;
     private int ballCount;
     private ArrayList <Pitch> pitches;
-    Field field;
+    BasePath basePath;
 }
