@@ -31,6 +31,8 @@ public class Player
 
     public int getAge () { return age; }
 
+    public SeasonStats getStat () { return stat; }
+
     public void updateFName (String newfName)
     {
         fName = newfName;
@@ -68,13 +70,14 @@ public class Player
         assert position > 0 && position < 10;
     }
 
-    public Player(String fName, String lName, int position, int number, int age)
+    public Player(String fName, String lName, int position, int number, int age, SeasonStats stat)
     {
         this.fName = fName;
         this.lName = lName;
         this.position = position;
         this.number = number;
         this.age = age;
+        this.stat = stat;
         repOk();
     }
 
@@ -83,5 +86,6 @@ public class Player
     private int position;
     private int number;
     private int age;
+    private SeasonStats stat;
 
 }
