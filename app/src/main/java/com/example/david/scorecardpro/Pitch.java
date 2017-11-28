@@ -6,10 +6,11 @@ package com.example.david.scorecardpro;
 
 public enum Pitch
 {
-    STRIKE("Strike"),
+    STRIKE("STRIKE"),
     BALL("BALL"),
     HIT("HIT"),
     FOUL("FOUL"),
+    FOULPOPPEDOUT("FOULPOOPEDOUT"),
     HITBYPITCH("HITBYPITCH");
 
     private String stringValue;
