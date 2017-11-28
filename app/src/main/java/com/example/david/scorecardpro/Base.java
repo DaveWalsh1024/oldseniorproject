@@ -33,10 +33,9 @@ public class Base
         repOk();
     }
 
-    public Base (int number, Player runnerOnBase)
+    public Base (int number)
     {
         this.baseNumber = number;
-        this.runnerOnBase = runnerOnBase;
         repOk();
     }
 

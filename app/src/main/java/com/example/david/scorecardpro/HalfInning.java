@@ -66,13 +66,11 @@ public class HalfInning
     }
 
 
-    public HalfInning (int outs, Team battingTeam, Team pitchingTeam, int runsScored, int topOrBottom, Inning inning, BasePath basePath)
+    public HalfInning (Team battingTeam, Team pitchingTeam, int topOrBottom, Inning inning, BasePath basePath)
     {
         this.batters = new ArrayList<>();
-        this.outs = outs;
         this.battingTeam = battingTeam;
         this.pitchingTeam = pitchingTeam;
-        this.runsScored = runsScored;
         this.topOrBottom = topOrBottom;
         this.inning = inning;
         this.basePath = basePath;

@@ -30,10 +30,8 @@ public class Season
         repOk();
     }
 
-    public Season (int wins, int losses)
+    public Season ()
     {
-        this.wins = wins;
-        this.losses = losses;
         this.games = new ArrayList<>();
         repOk();
     }

@@ -62,14 +62,12 @@ public class Game {
         assert innings != null;
     }
 
-    public Game(Team homeTeam, Team awayTeam, Date gameDate, String location, int homeTeamScore, int awayTeamScore)
+    public Game(Team homeTeam, Team awayTeam, Date gameDate, String location)
     {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
         this.gameDate = gameDate;
         this.location = location;
-        this.homeTeamScore = homeTeamScore;
-        this.awayTeamScore = awayTeamScore;
         this.innings = new ArrayList<>();
         repOk();
     }

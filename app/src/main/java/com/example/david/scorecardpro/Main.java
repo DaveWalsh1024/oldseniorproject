@@ -12,10 +12,6 @@ public class Main {
         Player joe = new Player("Joe", "Russell", 1, 51, 34);
 
         Coach craig = new Coach("Craig", "Damon", "Manager");
-
-        Season season1 = new Season(0, 0);
-
-        Team goodGuys = new Team("Red Sox", season1);
     }
 
 }

@@ -6,13 +6,39 @@ import java.util.ArrayList;
  * Created by david on 11/26/2017.
  */
 
-public class SeasonStats
+public class Stats
 {
     public int getStrikeouts () { return strikeouts; }
     public int getHomeruns () { return homeruns; }
     public int getWalks () { return walks; }
     public int getTimesAtBat () { return timesAtBat; }
     public Season getSeason () { return season; }
+    public Player getPlayer () { return player; }
+    public Team getTeam () { return team; }
+
+    public void incrementStrikeouts ()
+    {
+        strikeouts++;
+        repOk();
+    }
+
+    public void incrementHomeruns ()
+    {
+        homeruns++;
+        repOk();
+    }
+
+    public void incremementWalks ()
+    {
+        walks++;
+        repOk();
+    }
+
+    public void incrementTimesAtBat ()
+    {
+        timesAtBat++;
+        repOk();
+    }
 
     public float getStrikeoutPercentage ()
     {
@@ -38,18 +64,13 @@ public class SeasonStats
         assert homeruns > -1;
         assert walks > -1;
         assert timesAtBat > -1;
-        assert season != null;
-        assert gameStats != null;
     }
 
-    public SeasonStats (int strikeouts, int homeruns, int walks, int timesAtBat, Season season, GameStats gameStats)
+    public Stats (Season season, Player player, Team team)
     {
-        this.strikeouts = strikeouts;
-        this.homeruns = homeruns;
-        this.walks = walks;
-        this.timesAtBat = timesAtBat;
         this.season = season;
-        this.gameStats = new ArrayList<>();
+        this.player = player;
+        this.team = team;
         repOk();
     }
 
@@ -57,7 +78,8 @@ public class SeasonStats
     private int homeruns;
     private int walks;
     private int timesAtBat;
-    private Season season;
-    private ArrayList <GameStats> gameStats;
+    private Season season; //optional
+    private Team team; //optional
+    private Player player; //optional
 
 }

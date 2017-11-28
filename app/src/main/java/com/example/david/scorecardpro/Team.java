@@ -52,13 +52,12 @@ public class Team
         assert disabledPlayerList != null;
     }
 
-    public Team (String name, Season currentSeason)
+    public Team (String name)
     {
         this.players = new ArrayList<>();
         this.coaches = new ArrayList<>();
         this.disabledPlayerList = new ArrayList<>();
         this.name = name;
-        this.currentSeason = currentSeason;
         repOk();
     }
 

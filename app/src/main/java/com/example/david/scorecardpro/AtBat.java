@@ -33,12 +33,10 @@ public class AtBat
         //call the advanced runner method that we need to write
     }
 
-    public AtBat (Player hitter, HalfInning halfInning, int strikeCount, int ballCount, BasePath basePath)
+    public AtBat (Player hitter, HalfInning halfInning, BasePath basePath)
     {
         this.hitter = hitter;
         this.halfInning = halfInning;
-        this.strikeCount = strikeCount;
-        this.ballCount = ballCount;
         this.pitches = new ArrayList<>();
         this.basePath = basePath;
         repOk();

@@ -72,13 +72,8 @@ public class BasePath
             return homeBase;
     }
 
-    public BasePath (Base firstBase, Base secondBase, Base thirdBase, Base homeBase, HalfInning halfInning)
+    public BasePath ()
     {
-        this.halfInning = halfInning;
-        this.firstBase = firstBase;
-        this.secondBase = secondBase;
-        this.thirdBase = thirdBase;
-        this.homeBase = homeBase;
         repOk();
     }
 
