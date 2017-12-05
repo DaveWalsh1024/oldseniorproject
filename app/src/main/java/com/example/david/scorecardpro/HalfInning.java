@@ -13,7 +13,6 @@ public class HalfInning
     public int getRunsScored () { return runsScored; }
     public int getOuts () { return outs; }
     public int getTopOrBottom () { return  topOrBottom; }
-    public BasePath getBasePath () { return basePath; }
     public Inning getInning () { return inning; }
 
     public void setTopOrBottom (int halfInningNumber)
@@ -73,7 +72,6 @@ public class HalfInning
         this.pitchingTeam = pitchingTeam;
         this.topOrBottom = topOrBottom;
         this.inning = inning;
-        this.basePath = basePath;
         repOk();
     }
 
@@ -92,5 +90,4 @@ public class HalfInning
     private int runsScored;
     private int topOrBottom; //1 for top of inning, 2 for bottom of inning
     private Inning inning;
-    private BasePath basePath;
 }

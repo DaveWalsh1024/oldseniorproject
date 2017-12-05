@@ -33,26 +33,23 @@ public class AtBat
         //call the advanced runner method that we need to write
     }
 
-    public AtBat (Player hitter, HalfInning halfInning, BasePath basePath)
+    public AtBat (HalfInning halfInning, BasePath basePath)
     {
-        this.hitter = hitter;
         this.halfInning = halfInning;
-        this.pitches = new ArrayList<>();
+        this.plays= new ArrayList<>();
         this.basePath = basePath;
         repOk();
     }
 
     public void repOk()
     {
-        assert hitter != null;
         assert strikeCount > -1 && strikeCount < 4;
         assert ballCount > -1 && ballCount <  5;
     }
 
-    Player hitter;
     HalfInning halfInning;
     private int strikeCount;
     private int ballCount;
-    private ArrayList <Pitch> pitches;
+    private ArrayList <Play> plays;
     BasePath basePath;
 }
