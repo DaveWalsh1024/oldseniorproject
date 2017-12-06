@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
 
-    
+
 
     <fragment
         android:name="com.example.david.scorecardpro.PitchFragment"
