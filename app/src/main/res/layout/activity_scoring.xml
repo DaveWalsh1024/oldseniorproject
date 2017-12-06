@@ -9,6 +9,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
 
+
+    
+
     <fragment
         android:name="com.example.david.scorecardpro.PitchFragment"
         android:id="@+id/pitch_fragment"
